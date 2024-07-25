@@ -11,6 +11,15 @@ html {
 body {
   font-family: "Cairo", sans-serif;
   }
+  a{
+  text-decoration: none;
+    color: black;
+  }
+  ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
 @media (min-width: 768px) {
   .container {
     width: 750px;
@@ -38,19 +47,20 @@ body {
 /* start header  */
 
 header{
-    height: 10vh;
+    box-shadow: 0 0 15px black;
 }
 header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100%;
+  position: relative;
 }
 .container{
   margin: auto;
 }
 .links {
-  width: 50%;
+  
   font-weight: 400;
   font-size: 18px;
 }
@@ -75,20 +85,19 @@ header .container {
 .links ul li:hover::before{
   display: block;
   transform: translateX(-100%);
-
   -webkit-transform: translateX(0%);
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
-  transition: transform 1s;
-  -webkit-transition: transform 0.3s;
-  -moz-transition: transform 1s;
-  -ms-transition: transform 1s;
-  -o-transition: transform 1s;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
 }
 .links ul a {
-  text-decoration: none;
   color: black;
+  padding: 0 1rem;
 }
 .links ul li::before{
   content: "";
@@ -104,17 +113,19 @@ header .container {
   -moz-transform: translateX(-100%);
   -ms-transform: translateX(-100%);
   -o-transform: translateX(-100%);
-  transition: transform 1s;
-  -webkit-transition: transform .5 s;
-  -moz-transition: transform 1 s;
-  -ms-transition: transform 1 s;
-  -o-transition: transform 1 s;
+  transition: transform 0.5s;
+  -webkit-transition: transform 0.5s;
+  -moz-transition: transform 0.5s;
+  -ms-transition: transform 0.5s;
+  -o-transition: transform 0.5s;
+}
+.links ul li:last-child:hover .mega{
+  background-color: aqua;
 }
 .logo a {
   color: var(--main-color);
   font-weight: 700;
   font-size: 26px;
-  text-decoration: none;
 }
 @media screen and  (max-width:767px) {
   .container{
@@ -124,17 +135,61 @@ header .container {
     width: 100%;
     font-size: .9rem;
   }
-  header{
-    height: 15vh;
-  }
+
   header .container{
     flex-wrap: wrap;
     justify-content: center;
   }
   }
+  header .container .mega{
+    position: absolute;
+    background-color: white;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    top: 100%;
+    display: flex;
+    padding: 1.5rem 0;
+    border-bottom: 3px solid var(--main-color);
+    border-top: 2px solid #eee;
+    justify-content: space-around;
+    translate: 0px 22px;
+  }
+  header .container .mega ul li:hover {
+    background-color: #eee;
+    transition: 1s;
+    -webkit-transition: 1s;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+}
+  header .container .mega ul li{
+    padding: .5rem 4rem .5rem 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.208);
+  }
+  header .container .mega ul li:last-child{
+    border-bottom: none;
+    position: relative;
+  }
+  header .container .mega ul li a {
+    color: var(--main-color);
+    font-weight: 700;
+  }
+  header .container .mega ul li a i{
+    padding: 10px;
+  }
+  header .container .mega .img{
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  header .container .mega .img img{
+    width: 100%;
+  }
 /* srart sec1  */
 .sec1{
-    height: 80vh;
+  padding: 9rem 0;
     display: flex;
     align-items: center;
     background-color: rgb(236,236,236);
