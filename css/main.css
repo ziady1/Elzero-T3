@@ -821,7 +821,7 @@ header .container .mega .img img {
     justify-content: center;
   }
   .how .how-content .img {
-    width: 75%;
+    width: 60%;
   }
   .how .how-content .hows {
     width: 100%;
@@ -1124,3 +1124,119 @@ box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
   color: white  ;
 }
 /* end Pricing  */
+
+
+
+
+
+/* start stats */
+.stats{
+  background-image: url(../img/stats.jpg);
+position: relative;
+  padding: 3rem 0;
+  background-size: cover;
+  min-height: 300px;
+}
+.stats::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255 255 255 / 95%);
+}
+.stats .cards{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.stats .container{
+  position: relative;
+}
+@media (max-width: 991px) {
+  .stats .cards .card{
+    width: 32%;
+
+  }
+}
+@media (max-width: 767px) {
+  .stats .cards .card{
+    width: 97%;
+    margin: auto;
+  }
+
+}
+.stats h3 {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+.stats .cards .card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  padding: 1rem 6rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+.stats .cards .card::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 1px;
+  background-color: var(--main-color);
+  top: 100%;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+.stats .cards .card::after{
+  content: "";
+  position: absolute;
+  right:  0;
+  height: 100%;
+  width: 1px;
+  background-color: var(--main-color);
+  bottom:  100%;
+  transition: .4s;
+  -webkit-transition: .4s;
+  -moz-transition: .4s;
+  -ms-transition: .4s;
+  -o-transition: .4s;
+}
+.stats .cards .card:hover::before{
+  transform: translateY(-100%);
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  -ms-transform: translateY(-100%);
+  -o-transform: translateY(-100%);
+}
+.stats .cards .card:hover::after{
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
+}
+.stats .cards .card i{
+font-size: 32px;
+}
+.stats .cards .card p:nth-child(2){
+font-size: 50px;
+font-weight: 700;
+margin: .5rem 0;
+}
+.stats .cards .card p:nth-child(3){
+font-size: 20px;
+font-weight: 700;
+color: var(--main-color);
+}
+/* end stats */
