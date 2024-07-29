@@ -562,7 +562,7 @@ header .container .mega .img img {
 .testimonials .tests {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   padding-bottom: 3rem;
 }
@@ -725,6 +725,9 @@ header .container .mega .img img {
 /* end Services */
 
 /* start skills  */
+.our-skills {
+  padding: 4rem 0;
+}
 .our-skills .all-skills {
   width: 49%;
 }
@@ -794,6 +797,7 @@ header .container .mega .img img {
 /* start how  */
 .how {
   background-color: #eee;
+  padding: 4rem 0;
 }
 .how .how-content {
   display: flex;
@@ -851,3 +855,272 @@ header .container .mega .img img {
   width: 100%;
 }
 /* end how  */
+
+/* start Events */
+.events {
+  position: relative;
+  padding: 5rem 0;
+}
+ .dots {
+  position: absolute;
+  z-index: 2;
+}
+ .ya-top {
+  right: 0;
+  top: 10%;
+}
+ .ya-bottom {
+  left: 0;
+  bottom: 10%;
+}
+.events .event-content {
+  padding: 0 3rem;
+  z-index: 5;
+  position: relative;
+}
+.events .event-content .cont {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 0;
+}
+@media (max-width: 991px) {
+  .events .event-content .cont .img {
+    display: none;
+  }
+}
+
+.events .event-content .cont .img img {
+  width: 100%;
+}
+.events .event-content .cont .count .time {
+  display: flex;
+  gap: 1rem;
+  /* margin: auto; */
+  justify-content: center;
+}
+.events .event-content .cont .count > h2 {
+  font-size: 30px;
+  font-weight: 700px;
+}
+.events .event-content .cont .count > p {
+  color: rgb(119, 119, 119);
+  line-height: 32px;
+}
+.events .event-content .cont .count .time .days {
+  border: 2px solid #eee;
+  text-align: center;
+  padding: 5px 17px;
+  border-radius: 5px;
+  color: var(--main-color);
+}
+.events .event-content .cont .count .time .days .nofd {
+  font-size: 35px;
+  font-weight: 700;
+  border-bottom: 2px solid;
+}
+.events .event-content .cont .count .time .days .nofd > p {
+  font-size: 35px;
+  font-weight: 700;
+}
+.events .event-content .cont .count .time .days div:nth-child(2) {
+  font-size: 13px;
+}
+.events .event-content form {
+  padding: 1rem;
+  background-color: #eee;
+  width: 50%;
+  margin: auto;
+  border-radius: 41px;
+  display: flex;
+  justify-content: space-around;
+}
+.events .event-content form input {
+  padding: 20px 57px 20px 10px;
+  border: none;
+  border-radius: 35px;
+  width: 63%;
+}
+.events .event-content form button {
+  background-color: var(--main-color);
+  color: white;
+  border: navajowhite;
+  padding: 15px;
+  border-radius: 25px;
+  font-weight: 700;
+}
+@media screen and (max-width: 767px) {
+  .events .event-content form {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .events .event-content form input {
+    padding: 20px;
+    width: 100%;
+  }
+  .events .event-content form button {
+    font-weight: 700;
+    margin-top: 2rem;
+  }
+}
+/* end Events */
+/* start Pricing  */
+.pricing {
+  background-color: #eee;
+  padding: 4rem 0;
+  position: relative;
+}
+.pricing .pricing-content{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.pricing .pricing-content .price{
+  background-color: white;
+  padding: 1rem 0;
+  position: relative;
+overflow: hidden;
+z-index: 12;
+width: 31%;
+box-shadow: 0 12px 20px 0 rgb(0 0 0 / 13%), 0 2px 4px 0 rgb(0 0 0 / 12%);
+}
+.pricing .pricing-content .price:nth-child(2){
+  position: relative;
+    /* top: -11px; */
+    bottom: 1rem;
+}
+.pricing .pricing-content .price:nth-child(2) .most{
+  top: 0;
+  position: absolute;
+  background-color: var(--main-color);  
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  transform: rotate(90deg);
+  top: 55px;
+  right: -20px;
+    padding: 5px;
+    padding-right: 30px;
+}
+.pricing .pricing-content .price:nth-child(2) .most::after{
+  content: "";
+  border: 15px solid;
+  position: absolute;
+  bottom: 0;
+  right: -1px;
+  border-color: transparent white transparent transparent;
+}
+@media screen and (max-width:1044px) {
+  .pricing .pricing-content .price{
+    width: 49%;
+    margin-top: 1rem;
+
+  }
+
+}
+@media screen and (max-width: 767px){
+  .pricing .pricing-content .price{
+    width: 100%;
+  }
+  .pricing .pricing-content .price:nth-child(2){
+    margin-top: 2rem;
+  }
+}
+.pricing .pricing-content .price::before{
+  content: "";
+  background-color: rgba(238, 238, 238, 0.34);
+  position: absolute;
+  left: -100%;
+  height: 50%;
+  width: 100%;
+  bottom: 50%;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+}
+.pricing .pricing-content .price::after{
+  content: "";
+  background-color: rgba(238, 238, 238, 0.34);
+  position: absolute;
+  left: 100%;
+  height: 50%;
+  width: 100%;
+  bottom: 0%;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  -ms-transition: all .3s;
+  -o-transition: all .3s;
+}
+.pricing .pricing-content .price:hover::after{
+  transform: translateX(-100%);
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  -ms-transform: translateX(-100%);
+  -o-transform: translateX(-100%);
+}
+.pricing .pricing-content .price:hover::before{
+  transform: translateX(100%);
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  -ms-transform: translateX(100%);
+  -o-transform: translateX(100%);
+}
+.pricing .pricing-content .price .img {
+  width: 20%;
+  margin: auto;
+}
+.pricing .pricing-content .price .img img {
+  width: 100%;
+}
+.pricing .pricing-content .price ul li {
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+}
+.pricing .pricing-content .price ul li i {
+  color: var(--main-color);
+  margin-right: 5px;
+}
+.pricing .pricing-content .price ul li:nth-child(1) {
+   
+    border-top: 1px solid #eee;
+  
+}
+.pricing .pricing-content .price ul li:nth-child(5) {
+  border-bottom: none;
+}
+.pricing .pricing-content .price h2:nth-child(1){
+  text-align: center;
+}
+.pricing .pricing-content .price h2:nth-of-type(2){
+  text-align: center;
+  font-size: 60px;
+  font-weight: 700;
+  color: var(--main-color);
+}
+.pricing .pricing-content .price .lnk{
+  display: flex;
+  justify-content: center;
+}
+.pricing .pricing-content .price a{
+  padding: 1rem 2rem;
+  color: var(--main-color);
+  background-color: transparent;
+  border: 2px solid var(--main-color);
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  display: inline-block;
+  font-weight: 700;
+  z-index: 32;
+}
+.pricing .pricing-content .price a:hover{
+  background-color: var(--main-color);
+  color: white  ;
+}
+/* end Pricing  */
