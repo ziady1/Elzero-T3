@@ -25,18 +25,23 @@ ul {
 @media (min-width: 768px) {
   .container {
     width: 750px;
+    margin: auto;
   }
 }
 /* Medium */
 @media (min-width: 992px) {
   .container {
     width: 970px;
+    margin: auto;
+
   }
 }
 /* Large */
 @media (min-width: 1200px) {
   .container {
     width: 1170px;
+    margin: auto;
+
   }
 }
 /* end Global Rules */
@@ -639,7 +644,62 @@ header .container .mega .img img {
 /* start Testimonials */
 /* end Testimonials */
 /* start Members */
+.members .cards{
+  display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+}
+.members .cards .card{
+  /* background-color: rgb(243,243,243); */
+  position: relative;
+  border-radius: 16px;
+    /* height: 400px; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
 
+.members .cards .card::before{
+  content: "";
+  width: 80%;
+  height: 100%;
+  right: 0;
+  position: absolute;
+  border-radius: 1rem;
+  z-index: -1;
+  background-color: rgb(243, 243, 243);
+}
+.members .cards .card .img {
+  padding-top: 3rem;
+  /* border-radius: 14rem; */
+  width: 90%;
+}
+.members .cards .card .img  img{
+  width: 100%;
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+.members .cards .card .social {
+  width: 10%;
+  display: flex;
+  justify-content: center;
+  color: rgb(119,119,119);
+}
+.members .cards .card .text{
+  left: 20%;
+  position: relative;
+}
+.members .cards .card .social ul li{
+  padding: 1rem 0;
+}
+.members .cards .card .text h2{
+  color: var(--main-color);
+}
 /* end Members */
 
 /* start Services */
@@ -1154,19 +1214,7 @@ position: relative;
 .stats .container{
   position: relative;
 }
-@media (max-width: 991px) {
-  .stats .cards .card{
-    width: 32%;
 
-  }
-}
-@media (max-width: 767px) {
-  .stats .cards .card{
-    width: 97%;
-    margin: auto;
-  }
-
-}
 .stats h3 {
   font-size: 40px;
   font-weight: 700;
@@ -1183,6 +1231,17 @@ position: relative;
   margin-top: 1rem;
   position: relative;
   overflow: hidden;
+}
+@media (max-width: 1199px) {
+ .stats .cards .card {
+    width: 48%;
+
+  }
+}
+@media (max-width: 767px) {
+ .stats .cards .card {
+    width: 90%;
+  }
 }
 .stats .cards .card::before{
   content: "";
